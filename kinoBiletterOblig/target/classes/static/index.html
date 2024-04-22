@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bestilling av kinobiletter</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <style>
+        .validering {
+            color: red;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            height: 0.5em;
+            font-size: 9px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Bestilling av kinobiletter</h1>
+    <div class="col-md-4">
+        <div class="form">
+    <form class="form" onsubmit="return false"> <!-- Hindrer at form resetter seg selv -->
+        <div class="form-group">
+            <label>Velg film : </label>
+            <div id="film" class="dropdown"></div>
+        </div>
+        <div class="form-group">
+            <label for="antall">Antall</label>
+            <input type="number" id="antall" class="form-control">
+            <div id="antallValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <label for="fornavn">Fornavn</label>
+            <input type="text" class="form-control" id="fornavn">
+            <div id="fornavnValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <label for="etternavn">Etternavn</label>
+            <input type="text" class="form-control" id="etternavn">
+            <div id="etternavnValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <label for="telefonnr">Telefonnr</label>
+            <input type="number" class="form-control" id="telefonnr">
+            <div id="telefonnrValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <label for="epost">Epost</label>
+            <input type="text" id="epost" class="form-control">
+            <div id="epostValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" id="kjopBilett">Kjøp Bilett</button>
+        </div>
+
+    </form>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-8">
+        <h3>Alle biletter</h3>
+        <div id="biletter"></div>
+        <button class="btn btn-danger" id="slettKnapp">Slett biletter</button>
+    </div>
+
+
+
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+</body>
+</html>
