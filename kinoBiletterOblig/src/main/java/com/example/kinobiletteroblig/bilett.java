@@ -64,6 +64,7 @@ public class bilett {
     public void setEpost(String epost) {
         this.epost = epost;
     }
+
     @Override
     public String toString() {
         return "bilett{" +
@@ -75,6 +76,7 @@ public class bilett {
                 ", epost='" + epost + '\'' +
                 '}';
     }
+    //default konstruktør
     public bilett(){
 
     }
