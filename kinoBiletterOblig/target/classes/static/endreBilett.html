@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Endre bilett</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+
+</head>
+<body>
+<div class="container">
+    <h1>Endre Bilett</h1>
+    <form class="form" onsubmit="return false">
+        <input type="hidden" id="id">
+        <div class="form-group">
+            <label>Velg film</label>
+            <div id="film" class="dropdown"></div>
+            <div id="filmValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <label for="antall">Antall</label>
+            <input type="number" id="antall" class="form-control">
+            <div id="antallValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <label for="fornavn">Fornavn</label>
+            <input type="text" class="form-control" id="fornavn">
+            <div id="fornavnValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <label for="etternavn">Etternavn</label>
+            <input type="text" class="form-control" id="etternavn">
+            <div id="etternavnValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <label for="telefonnr">Telefonnr</label>
+            <input type="number" class="form-control" id="telefonnr">
+            <div id="telefonnrValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <label for="epost">Epost</label>
+            <input type="text" id="epost" class="form-control">
+            <div id="epostValidering" class="validering"></div>
+        </div>
+        <div class="form-group">
+            <input type="button" value="Endre" class="btn btn-primary" onclick="endreBilett()">
+        </div>
+    </form>
+</div>
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="endreBilett.js"></script>
+</body>
+</html>

@@ -1,20 +1,23 @@
 package com.example.kinobiletteroblig;
 
 public class bilett {
+
     private String tittel;
     private int antall;
     private String fornavn;
     private String etternavn;
     private int telefonnr;
     private String epost;
+    private int id;
 
-    public bilett(String tittel, int antall, String fornavn, String etternavn, int telefonnr, String epost) {
+    public bilett(String tittel, int antall, String fornavn, String etternavn, int telefonnr, String epost, int id) {
         this.tittel = tittel;
         this.antall = antall;
         this.fornavn = fornavn;
         this.etternavn = etternavn;
         this.telefonnr = telefonnr;
         this.epost = epost;
+        this.id = id;
     }
 
     public String getTittel() {
@@ -65,6 +68,14 @@ public class bilett {
         this.epost = epost;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "bilett{" +
@@ -73,8 +84,10 @@ public class bilett {
                 ", fornavn='" + fornavn + '\'' +
                 ", etternavn='" + etternavn + '\'' +
                 ", telefonnr=" + telefonnr +
-                ", epost='" + epost + '\'' +
+                ", epost='" + epost + '\''+
+                ", id=" + id +
                 '}';
+
     }
     //default konstruktør
     public bilett(){

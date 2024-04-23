@@ -34,8 +34,23 @@ public class bilettController {
         filmList.add(new film("Dune 2"));
         return filmList;
     }
+
+    @GetMapping("hentEnBilett")
+    public bilett hentEnBilett(int id){
+        return rep.hentEnBilett(id);
+    }
+
+    @PostMapping("endreEnBilett")
+    public void endreEnBilett(bilett bilett){
+        rep.endreEnBilett(bilett);}
+
     @GetMapping("slettBiletter")
    public void slettAlleKunder(){
         rep.slettBiletter();
+    }
+
+    @GetMapping("slettEnBilett")
+    public void slettEnBilett(int id){
+        rep.slettEnBilett(id);
     }
 }

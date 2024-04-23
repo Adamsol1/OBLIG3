@@ -1,6 +1,7 @@
 $(document).ready(function (){ //Henter hentFilm når dokumenter er klart
 
    hentFilm();
+   hentBilett();
 
 })
 function hentFilm(){ //henter film fra server
@@ -115,7 +116,7 @@ $("#kjopBilett").click(function kjopBilett(){
 
 
 
-    const selectedFilm = $("#valgFilm").val();
+
     //lager bilett objekt
     const bilett = {
         tittel : $("#valgFilm").val(),
@@ -165,14 +166,23 @@ function formaterBilett(bilett){
         ut += "<td>" + biletten.etternavn+ "</td>";
         ut += "<td>" + biletten.telefonnr + "</td>";
         ut += "<td>" + biletten.epost + "</td>";
-
-
+        ut += "<td> <a class='btn btn-primary' href='endreBilett.html?id="+biletten.id+"'>Endre</a></td>"+
+        "<td> <button class='btn btn-danger' onclick='slettEnBilett("+biletten.id+")'>Slett</button></td>"+
+        "</tr>";
 
     }
     ut += "</table>"
     //legger til bilett
     $("#biletter").html(ut);
 }
+
+function slettEnBilett(id){
+    const url ="/slettEnBilett?id="+id;
+    $.get(url, function (){
+        window.location.href = "/";
+    })
+}
+
 //slette funksjon
 $("#slettKnapp").click(function slettBilett(){
     //henter slettBilett fra server
