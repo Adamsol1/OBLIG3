@@ -12,6 +12,8 @@ $(document).ready(function (){
         $("#valgFilm").val(biletten.tittel);
     })
 })
+
+
 function hentFilm(){
     $.get("/hentFilm", function (film){
         formaterFilm(film)
